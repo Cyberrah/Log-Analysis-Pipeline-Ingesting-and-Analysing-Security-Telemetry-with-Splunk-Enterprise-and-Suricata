@@ -44,6 +44,10 @@ Splunk Enterprise · Splunk Universal Forwarder · SPL · Suricata · EVE JSON �
 
 The workbook provides the detailed source inventory. Counts in screenshots describe their own selected time windows and should not be totalled across views.
 
+## Reproduce and extend the lab
+
+[Follow the reproduction checklist](docs/reproduction-checklist.md) for collection gates, historical search requirements, documented results and proposed follow-up tests. It distinguishes supplied evidence from configuration or test results that still need to be collected.
+
 ## Workflow
 
 1. Configure the receiver and scoped log inputs on the two forwarders.
