@@ -1,0 +1,7 @@
+index=suricata sourcetype="suricata:json"
+| spath
+| search event_type IN ("ssh", "flow")
+| where (src_ip="192.168.167.4" AND dest_ip="192.168.167.5") OR (src_ip="192.168.167.5" AND dest_ip="192.168.167.4")
+| where src_port=22 OR dest_port=22
+| table _time event_type flow_id src_ip src_port dest_ip dest_port flow.start flow.end
+| sort 0 _time

@@ -1,0 +1,6 @@
+# Example group name; destination matches the lab receiver.
+[tcpout]
+defaultGroup = kestrel_lab
+
+[tcpout:kestrel_lab]
+server = 192.168.167.4:9997

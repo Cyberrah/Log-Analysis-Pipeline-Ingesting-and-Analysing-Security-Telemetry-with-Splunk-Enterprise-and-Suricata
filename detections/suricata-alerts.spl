@@ -1,0 +1,5 @@
+index=suricata sourcetype="suricata:json" earliest=-24h latest=now
+| spath
+| search event_type=alert
+| table _time src_ip dest_ip alert.signature alert.severity
+| sort 0 - _time

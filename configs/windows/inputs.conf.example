@@ -1,0 +1,12 @@
+# Windows Universal Forwarder example. Merge with existing configuration.
+[WinEventLog://Security]
+disabled = 0
+index = windows
+current_only = 1
+renderXml = 1
+
+[WinEventLog://System]
+disabled = 0
+index = windows
+current_only = 1
+renderXml = 1

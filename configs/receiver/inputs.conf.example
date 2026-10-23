@@ -1,0 +1,3 @@
+# Enable receiving on the lab Splunk Enterprise instance.
+[splunktcp://9997]
+disabled = 0

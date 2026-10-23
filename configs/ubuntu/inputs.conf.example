@@ -1,0 +1,15 @@
+# Ubuntu Universal Forwarder example. Merge with existing configuration.
+[monitor:///var/log/suricata/eve.json]
+disabled = 0
+index = suricata
+sourcetype = suricata:json
+
+[monitor:///var/log/auth.log]
+disabled = 0
+index = linux
+sourcetype = syslog
+
+[monitor:///var/log/syslog]
+disabled = 0
+index = linux
+sourcetype = syslog

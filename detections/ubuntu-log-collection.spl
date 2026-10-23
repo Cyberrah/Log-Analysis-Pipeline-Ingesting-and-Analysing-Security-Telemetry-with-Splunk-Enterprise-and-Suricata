@@ -1,0 +1,3 @@
+index=linux earliest=-24h latest=now
+| stats count latest(_time) as last_seen by host source sourcetype
+| convert ctime(last_seen)

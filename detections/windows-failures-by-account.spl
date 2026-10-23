@@ -1,0 +1,5 @@
+index=windows sourcetype="XmlWinEventLog:Security" "<EventID>4625</EventID>" earliest=-24h latest=now
+| rex field=_raw "<Data Name='TargetUserName'>(?<user>[^<]+)</Data>"
+| rex field=_raw "<Data Name='IpAddress'>(?<src_ip>[^<]+)</Data>"
+| stats count as failures by host user src_ip
+| sort 0 - failures
